@@ -15,7 +15,7 @@ cd gr-sdrplay-docker \
 _build a docker image tagged as gnuradio:0_ \
 docker build -t gnuradio:0 . \
 _run the container_ \
-bash run_gnuradio 
+bash run_gnuradio \
 
 ## Changes coming
 Support for Windows and Mac.
