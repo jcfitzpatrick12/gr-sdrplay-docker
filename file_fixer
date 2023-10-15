@@ -1,0 +1,27 @@
+#!/bin/bash
+#libgnuradio-sdrplay3.so           
+#libgnuradio-sdrplay3.so.v3.11.0.1git-1-ge292818c
+#libgnuradio-sdrplay3.so.3.11.0git
+
+# Define the source and destination directories
+src_dir="/usr/local/lib/x86_64-linux-gnu/"
+dst_dir="/usr/lib/x86_64-linux-gnu/"
+
+# List of files to copy
+files=("libgnuradio-sdrplay3.so.3.11.0git" "libgnuradio-sdrplay3.so.v3.11.0.1git-1-ge292818c" "libgnuradio-sdrplay3.so")
+# Loop through the files and copy them
+for file in "${files[@]}"; do
+    src_file="$src_dir$file"
+    dst_file="$dst_dir$file"
+    
+    # Check if the source file exists
+    if [ -e "$src_file" ]; then
+        # Copy the file to the destination directory
+        sudo cp "$src_file" "$dst_file"
+        echo "Copied $src_file to $dst_file"
+    else
+        echo "Source file $src_file not found."
+    fi
+done
+
+echo "File copy completed."

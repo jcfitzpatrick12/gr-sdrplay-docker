@@ -1,0 +1,6 @@
+#instructions to run gnuradio with sdrplay in docker
+cd /...path_to.../gnuradio_docker
+#build the image
+docker build -t gnuradio:0 .
+#run gnuradio-companion inside the container
+bash run_gnuradio
