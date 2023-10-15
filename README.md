@@ -6,9 +6,15 @@ Automated install and running of gnuradio with gr-sdrplay3 plugin through Docker
 Install Docker for Ubunutu at https://docs.docker.com/engine/install/ubuntu/
 
 ## Installation
-cd [your_preferred_path]
-git clone https://github.com/jcfitzpatrick12/gr-sdrplay-docker.git
-docker build -t gnuradio:0 .
-bash run_gnuradio
+_change to your preferred directory_ \
+cd [your_preferred_path] \
+_Clone the gr-sdrplay-docker repository:_ \
+git clone https://github.com/jcfitzpatrick12/gr-sdrplay-docker.git \
+_Navigate to the cloned directory where the files are stored:_ \
+cd gr-sdrplay-docker \
+_build a docker image tagged as gnuradio:0_ \
+docker build -t gnuradio:0 . \
+_run the container_ \
+bash run_gnuradio 
 
 
